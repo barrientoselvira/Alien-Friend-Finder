@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+</head>
+<body>
+
+
+        <div class="container">
+<p> Survey Questions</p>
+<form>
+    
+        <div class="form-group">
+        <h2>About You</h2>
+          <label for="yourName">Name (Required)</label>
+          <input type="name" class="form-control" id="yourName">
+        </div>
+        <div class="form-group">
+          <label for="yourPictures">Link to Photo Image (Required)</label>
+          <input type="putImage" class="form-control" id="yourImage" >
+        </div>
+    </form>
+
+    
+
+        <h3>Question 1</h3><hr>
+        <h4>Test question here.</h4>
+        <select class="chosen-select" id="q1">
+            <option value></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select><br>
+
+        <h3>Question 2</h3><hr>
+        <h4>Test question here.</h4>
+        <select class="chosen-select" id="q2">
+            <option value></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select><br>
+
+        <h3>Question 3</h3><hr>
+        <h4>Test question here.</h4>
+        <select class="chosen-select" id="q3">
+            <option value></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select><br>
+
+        <h3>Question 4</h3><hr>
+        <h4>Test question here.</h4>
+        <select class="chosen-select" id="q4">
+            <option value></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select><br>
+
+        <h3>Question 5</h3><hr>
+        <h4>Test question here.</h4>
+        <select class="chosen-select" id="q5">
+            <option value></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select><br>
+
+        <h3>Question 6</h3><hr>
+        <h4>Test question here.</h4>
+        <select class="chosen-select" id="q6">
+            <option value></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select><br>
+
+        <h3>Question 7</h3><hr>
+        <h4>Test question here.</h4>
+        <select class="chosen-select" id="q7">
+            <option value></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select><br>
+
+        <h3>Question 8</h3><hr>
+        <h4>Test question here.</h4>
+        <select class="chosen-select" id="q8">
+            <option value></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select><br>
+
+        <h3>Question 9</h3><hr>
+        <h4>Test question here.</h4>
+        <select class="chosen-select" id="q9">
+            <option value></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select><br>
+
+
+        <h3>Question 10</h3><hr>
+        <h4>Test question here.</h4>
+        <select class="chosen-select" id="q10">
+            <option value></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select><br>
+     
+<br>
+
+
+    <button type="submit" class="btn btn-primary submit-button" >Submit</button>
+
+    </div>
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+
+
+     $(".submit-button").on("click", function(event) {
+        event.preventDefault();
+            var userFriendOptions = {
+                userName:  $("#yourName").val().trim(),
+                userPicture: $("#yourImage").val().trim(),
+                scores: [
+                        $("#q1").val().trim(),
+                        $("#q2").val().trim(),
+                        $("#q3").val().trim(),
+                        $("#q4").val().trim(),
+                        $("#q5").val().trim(),
+                        $("#q6").val().trim(),
+                        $("#q7").val().trim(),
+                        $("#q8").val().trim(),
+                        $("#q9").val().trim(),
+                        $("#q10").val().trim()
+                ]
+    };
+        
+
+        console.log(userFriendOptions);
+        console.log($("#yourName").val());
+        console.log($("#q1").val());
+        console.log($("#q2").val());
+        console.log($("#q3").val());
+        console.log($("#q4").val());
+        console.log($("#q5").val());
+        console.log($("#q6").val());
+        console.log($("#q7").val());
+        console.log($("#q8").val());
+        console.log($("#q9").val());
+        console.log($("#q10").val());
+
+
+
+      $.post("../api/friends", userFriendOptions, 
+        (function(data) {
+            if (data) {
+                alert("Yay! You have a new friend");
+            }
+        else {
+            alert ("Sorry no matches for you");
+        }
+
+
+    });
+
+
+
+//     $.ajax({ url: currentURL + "../api/friends", method: "GET"})
+//         .then(function(friends) {
+//             console.log("URL:" + currentURL + "../api/friends");
+//             console.log(friends);
+//         });
+ });
+
+</script>
