@@ -1,4 +1,4 @@
-var userFriendOption = [
+var userFriendOptionArray = [
 {
     "name":"Flying Spaghetti Monster",
     "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
@@ -51,3 +51,6 @@ var userFriendOption = [
       ]
   }
 ];
+
+
+module.exports = userFriendOptionArray;

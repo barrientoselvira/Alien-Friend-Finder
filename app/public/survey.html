@@ -143,7 +143,7 @@
 <br>
 
 
-    <button type="submit" class="btn btn-primary submit-button" >Submit</button>
+    <button type="submit" class="btn btn-primary submit-button" id="submit" >Submit</button>
 
     </div>
 
@@ -155,7 +155,7 @@
 
 
 
-     $(".submit-button").on("click", function(event) {
+     $("#submit").on("click", function(event) {
         event.preventDefault();
             var userFriendOptions = {
                 userName:  $("#yourName").val().trim(),
@@ -173,7 +173,9 @@
                         $("#q10").val().trim()
                 ]
     };
-        
+
+    var origin = window.location.origin;
+
 
         console.log(userFriendOptions);
         console.log($("#yourName").val());
@@ -187,20 +189,12 @@
         console.log($("#q8").val());
         console.log($("#q9").val());
         console.log($("#q10").val());
+        
 
 
-
-      $.post("../api/friends", userFriendOptions, 
-        (function(data) {
-            if (data) {
-                alert("Yay! You have a new friend");
-            }
-        else {
-            alert ("Sorry no matches for you");
-        }
-
-
-    });
+    $.post("../api/friends", userFriendOptions, function(data) {
+           
+        });
 
 
 

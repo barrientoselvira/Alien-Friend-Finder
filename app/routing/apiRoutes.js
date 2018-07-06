@@ -1,30 +1,23 @@
-var yourFriends = require("../api/friends.js");
+var yourFriends = require("../data/friends.js");
 
-var path = required("path");
+var path = require("path");
+
 
 // ROUTING
 // ===============================================================================
 
 module.exports = function(app) {
-app.get("../api/friends", function(req, res){
-    res.json(yourFriends);
+app.get("./api/friends", function(req, res){
+   res.json(yourFriends);
 });
 
-app.post("../api/friends", function(req, res){
-        var userFriendOptions = req.body;
+// app.post("./api/friends", function(req, res){
+//        var userFriendOptions = req.body;
 
-        var userWants = userFriendOptions.scores;
-        // if(friendsData.length < 1){
-        //     data.push(req.body);
-        //     res.json(true);
-        // }
-        // else {
-        //     res.json(false);
-        // }
+//        var userWants = userFriendOptions.scores;
+     
 
-        var userName = "";
-        var userPicture = "";
-        var 
-    });
+    
+//    });
 
 };
